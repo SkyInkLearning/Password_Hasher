@@ -6,15 +6,6 @@ I let chatgpt create a program with which I can get hashed versions of a usernam
 
 The reason for this is that I am making a sitez to which only I am going to ever log into. So im only going to have a single admin account on the site. Im going to add the admin credentials to azure when I deploy and wanted to have the password hashed. 
 
-## How to run:
-
-Go to folder where program file is in.
-
-Open dev console and type in:
-
-dotnet run -- *password you want to hash*
-
-It will take a moment and then give you the hashed password and the salt key used.
 
 ## Packages:
 
@@ -53,3 +44,17 @@ string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
 Console.WriteLine("PasswordHash: " + hashed);
 Console.WriteLine("Salt: " + Convert.ToBase64String(salt));
 ```
+
+
+## How to run:
+
+Go to folder where program file is in.
+
+Open dev console and type in:
+
+dotnet run -- *password you want to hash*
+
+It will take a moment and then give you the hashed password and the salt key used.
+
+<img src="https://github.com/user-attachments/assets/bc4c6d79-d4ac-4dfc-a70f-2f56c191e28b" height="400">
+
