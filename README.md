@@ -2,10 +2,7 @@
 
 ## Purpose:
 
-I let chatgpt create a program with which I can get hashed versions of a username and password, together with a salt, to use for azure. 
-
-The reason for this is that I am making a sitez to which only I am going to ever log into. So im only going to have a single admin account on the site. Im going to add the admin credentials to azure when I deploy and wanted to have the password hashed. 
-
+The reason for this is that I am making a site to which only I am going to ever log into, for now. So im only going to have a single admin account on the site. When learning more about a possible solution, I was told that I might want to hash the password that I was going to store on azure so to learn more I had chatgpt create a program with which I can get hashed versions of a word, together with a salt, to use for azure.
 
 ## Packages:
 
@@ -44,7 +41,6 @@ string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
 Console.WriteLine("PasswordHash: " + hashed);
 Console.WriteLine("Salt: " + Convert.ToBase64String(salt));
 ```
-
 
 ## How to run:
 
