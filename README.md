@@ -1,14 +1,14 @@
-# Password hashing CLI (From chatgpt)
+## Password hashing CLI (From chatgpt)
 
-## Purpose:
+### Purpose:
 
 The reason for this is that I am making a site to which only I am going to ever log into, for now. So im only going to have a single admin account on the site. When learning more about a possible solution, I was told that I might want to hash the password that I was going to store on azure so to learn more I had chatgpt create a program with which I can get hashed versions of a word, together with a salt, to use for azure.
 
-## Packages:
+### Packages:
 
 Install-Package Microsoft.AspNetCore.Cryptography.KeyDerivation
 
-## The code:
+### The code:
 
 ```csharp
 using System.Security.Cryptography;
@@ -42,7 +42,7 @@ Console.WriteLine("PasswordHash: " + hashed);
 Console.WriteLine("Salt: " + Convert.ToBase64String(salt));
 ```
 
-## How to run:
+### How to run:
 
 Go to folder where program file is in.
 
